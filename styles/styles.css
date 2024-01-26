@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div.title {
+    font-size: 54px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: -60px;
+    margin-left: 270px;
+    padding-bottom: 0;
+    color: #e62525;
+    position: relative;
+}
+
+div.title::before,
+div.title::after {
+    content: '';
+    display: block;
+    height: 7px;
+    background-color: hsl(0, 0%, 0%);
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+div.title::before {
+    width: 55%;
+    bottom: 0; /* First line positioned at the bottom of div.title */
+}
+
+div.title::after {
+    width: 55%;
+    height: 2px;
+    bottom: -4px; /* Second line positioned a few pixels below the first line */
+}
+
+div.header {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    margin-top: -15px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+div.header::after {
+    content: '';
+    display: block;
+    border-bottom: 1.4px solid #000000;
+    width: 309px;
+    margin: 5px auto 50px;
+}
+
+div.footer {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+}
+
+div.pubkey-link {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    margin-top: 5px;
+}
+
+div.pubkey-link a {
+    border: 1.5px solid #000000;
+    padding: 3px;
+    display: inline-block;
+    border-radius: 0px;
+    color: darkred;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+div.pubkey-link a:hover {
+    border-color: #000000;
+    color: #FF0000;
+}
+
+a:link,
+a:visited {
+    color: rgb(220, 50, 47);
+    text-decoration: none;
+}
