@@ -1,84 +1,64 @@
-body {
+/* Resetting some default browser styles */
+body, h1, h2, p, a {
     margin: 0;
     padding: 0;
 }
 
-div.title {
-    font-size: 54px;
+/* Global Styles */
+body {
     font-family: 'Ubuntu', sans-serif;
-    margin-top: -60px;
-    margin-left: 270px;
-    padding-bottom: 0;
-    color: #e62525;
-    position: relative;
 }
 
-div.title::before,
-div.title::after {
+/* Title Styles */
+.title {
+    text-align: center;
+    font-size: 4em;
+    margin-top: 10px; /* Small space from the top */
+    color: #e62525; /* Dark red color */
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative; /* Required for absolute positioning */
+}
+
+.header::after {
     content: '';
     display: block;
-    height: 7px;
-    background-color: hsl(0, 0%, 0%);
+    border-bottom: 2px solid black; /* Dark red line */
+    width: 20%;
     position: absolute;
-    left: 0;
-    right: 0;
+    bottom: -5px; /* Adjusted position */
+    left: 40%; /* Centered line */
 }
 
-div.title::before {
-    width: 55%;
-    bottom: 0; /* First line positioned at the bottom of div.title */
+/* Navigation Link Styles */
+.pubkey-link {
+    text-align: center; /* Center the content */
+    margin-bottom: 10px;
 }
 
-div.title::after {
-    width: 55%;
-    height: 2px;
-    bottom: -4px; /* Second line positioned a few pixels below the first line */
-}
-
-div.header {
-    font-family: 'Ubuntu', sans-serif;
-    text-align: center;
-    margin-top: -15px;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-div.header::after {
-    content: '';
-    display: block;
-    border-bottom: 1.4px solid #000000;
-    width: 309px;
-    margin: 5px auto 50px;
-}
-
-div.footer {
-    font-family: 'Ubuntu', sans-serif;
-    text-align: center;
-}
-
-div.pubkey-link {
-    font-family: 'Ubuntu', sans-serif;
-    text-align: center;
-    margin-top: 5px;
-}
-
-div.pubkey-link a {
-    border: 1.5px solid #000000;
-    padding: 3px;
-    display: inline-block;
-    border-radius: 0px;
-    color: darkred;
+.pubkey-link a {
     text-decoration: none;
+    color: #e62525; /* Dark red color */
     font-weight: bold;
+    border: 1.5px solid #e62525; /* Dark red border */
+    padding: 3px 8px; /* Padding for the box */
+    display: inline-block;
+    border-radius: 3px; /* Rounded corners */
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition on hover */
 }
 
-div.pubkey-link a:hover {
-    border-color: #000000;
-    color: #FF0000;
+.pubkey-link a:hover {
+    color: #ff6666; /* Light red color on hover */
+    background-color: #ffe6e6; /* Light red background on hover */
 }
 
-a:link,
-a:visited {
-    color: rgb(220, 50, 47);
-    text-decoration: none;
+/* Footer Styles */
+.footer {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 20px; /* Adjusted margin */
 }
